@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/configuration")
 public class Configuration {
@@ -17,11 +15,8 @@ public class Configuration {
    @Value("${base.value}")
    private String randomValue;
 
-   @Value("${xing.body}")
-   List<String> body;
-
    @GetMapping("/name")
-   public String getConfigurationName(){
-      return name + "-" + randomValue + "-" + body.toString();
+   public String getConfigurationName() {
+      return name + "-" + randomValue;
    }
 }

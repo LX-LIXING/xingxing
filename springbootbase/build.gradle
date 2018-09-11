@@ -24,10 +24,20 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
     compile('org.springframework.boot:spring-boot-starter-web')
-    annotationProcessor('org.projectlombok:lombok')
-    compileOnly('org.projectlombok:lombok')
-    testAnnotationProcessor('org.projectlombok:lombok')
-    testCompileOnly('org.projectlombok:lombok')
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+configurations {
+    all*.exclude module: 'spring-boot-starter-logging'
+    all*.exclude module: 'logback-core'
+    all*.exclude module: 'logback-classic'
+}
+
+compileJava {
+    options.encoding = "UTF-8"
 }
