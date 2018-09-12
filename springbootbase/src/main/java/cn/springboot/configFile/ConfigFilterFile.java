@@ -17,7 +17,7 @@ import javax.servlet.Filter;
  * */
 
 @Configuration
-public class ConfigFile {
+public class ConfigFilterFile {
    @Bean
    public FilterRegistrationBean filterRegistrationBean() {
       FilterRegistrationBean registration = new FilterRegistrationBean();
