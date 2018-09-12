@@ -11,6 +11,7 @@ import java.util.Map;
 /*
 * 1.自定义异常类，添加@ControllerAdvice注解
 * 2.定义方法添加@ExceptionHandler注解，此注解用来标识处理那种异常
+* 3.返回的可以是json串，同时也可以返回ModelAndView
 *
 * */
 
