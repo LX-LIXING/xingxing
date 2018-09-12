@@ -13,7 +13,7 @@ import javax.servlet.Filter;
  *
  * 1.自定义过滤器
  * 2.自定义此文件
- * 3.在启动类上加上@ServletComponentScan
+ *
  * */
 
 @Configuration
