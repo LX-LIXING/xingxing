@@ -6,6 +6,13 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
+
+/*
+* 1.创建一个监听类
+* 2.在启动类中加入 @ServlerComponentScan
+*
+* */
+
 @WebListener
 @Slf4j
 public class ServletListener implements ServletRequestListener {
