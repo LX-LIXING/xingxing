@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 @Service
 public interface UserDao {
    List<User> findAll();
